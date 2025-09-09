@@ -70,6 +70,7 @@ def main():
 
     # get first dataset
     if not os.path.exists(f'{args.output_dir}/dataset_1.csv'):
+        os.makedirs(args.output_dir, exist_ok=True)
         print("Getting first dataset")
         with open(f'{args.output_dir}/dataset_1.csv', 'w', newline='', encoding='utf-8') as f:
             #process 100 at a time
